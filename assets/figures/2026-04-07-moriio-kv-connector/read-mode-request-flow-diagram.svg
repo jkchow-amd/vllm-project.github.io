@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 920" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#616161"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E4002B"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00843D"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1565C0"/>
+    </marker>
+    <marker id="arr-lgray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9E9E9E"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="920" fill="#FAFAFA" rx="8"/>
+
+  <!-- ============================================================ -->
+  <!-- BOXES FIRST                                                   -->
+  <!-- ============================================================ -->
+
+  <!-- CLIENT (top) -->
+  <rect x="335" y="24" width="150" height="48" rx="8" fill="#FFFFFF" stroke="#616161" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#333">CLIENT</text>
+
+  <!-- PROXY SERVER (top) -->
+  <rect x="260" y="142" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#1565C0" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="260" y="142" width="300" height="30" rx="10" fill="#1565C0"/>
+  <rect x="260" y="160" width="300" height="12" fill="#1565C0"/>
+  <text x="410" y="164" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF">PROXY SERVER</text>
+  <text x="410" y="190" text-anchor="middle" font-size="11" fill="#757575">serial dispatch (waits for prefill)</text>
+
+  <!-- MI300X NODE BOX -->
+  <rect x="70" y="316" width="680" height="310" rx="12" fill="#F5F5F5" stroke="#BDBDBD" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="410" y="342" text-anchor="middle" font-size="14" font-weight="600" fill="#424242">Single MI300X Node (8 GPUs)</text>
+
+  <!-- PREFILL Instance -->
+  <rect x="105" y="360" width="250" height="240" rx="10" fill="#FFFFFF" stroke="#E4002B" stroke-width="2.5"/>
+  <rect x="105" y="360" width="250" height="38" rx="10" fill="#E4002B"/>
+  <rect x="105" y="385" width="250" height="13" fill="#E4002B"/>
+  <text x="230" y="386" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF">PREFILL Instance</text>
+  <text x="230" y="420" text-anchor="middle" font-size="11" fill="#757575">kv_producer</text>
+  <rect x="128" y="438" width="90" height="44" rx="6" fill="#FFF3F3" stroke="#E4002B" stroke-width="1.5"/>
+  <text x="173" y="466" text-anchor="middle" font-size="12" font-weight="600" fill="#C62828">GPU 0</text>
+  <rect x="238" y="438" width="90" height="44" rx="6" fill="#FFF3F3" stroke="#E4002B" stroke-width="1.5"/>
+  <text x="283" y="466" text-anchor="middle" font-size="12" font-weight="600" fill="#C62828">GPU 1</text>
+  <rect x="128" y="492" width="90" height="44" rx="6" fill="#FFF3F3" stroke="#E4002B" stroke-width="1.5"/>
+  <text x="173" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#C62828">GPU 2</text>
+  <rect x="238" y="492" width="90" height="44" rx="6" fill="#FFF3F3" stroke="#E4002B" stroke-width="1.5"/>
+  <text x="283" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#C62828">GPU 3</text>
+  <text x="230" y="568" text-anchor="middle" font-size="11" font-weight="600" fill="#999">TP = 4</text>
+
+  <!-- DECODE Instance -->
+  <rect x="465" y="360" width="250" height="240" rx="10" fill="#FFFFFF" stroke="#00843D" stroke-width="2.5"/>
+  <rect x="465" y="360" width="250" height="38" rx="10" fill="#00843D"/>
+  <rect x="465" y="385" width="250" height="13" fill="#00843D"/>
+  <text x="590" y="386" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF">DECODE Instance</text>
+  <text x="590" y="420" text-anchor="middle" font-size="11" fill="#757575">kv_consumer</text>
+  <rect x="488" y="438" width="90" height="44" rx="6" fill="#F1F8F3" stroke="#00843D" stroke-width="1.5"/>
+  <text x="533" y="466" text-anchor="middle" font-size="12" font-weight="600" fill="#1B5E20">GPU 4</text>
+  <rect x="598" y="438" width="90" height="44" rx="6" fill="#F1F8F3" stroke="#00843D" stroke-width="1.5"/>
+  <text x="643" y="466" text-anchor="middle" font-size="12" font-weight="600" fill="#1B5E20">GPU 5</text>
+  <rect x="488" y="492" width="90" height="44" rx="6" fill="#F1F8F3" stroke="#00843D" stroke-width="1.5"/>
+  <text x="533" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#1B5E20">GPU 6</text>
+  <rect x="598" y="492" width="90" height="44" rx="6" fill="#F1F8F3" stroke="#00843D" stroke-width="1.5"/>
+  <text x="643" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#1B5E20">GPU 7</text>
+  <text x="590" y="568" text-anchor="middle" font-size="11" font-weight="600" fill="#999">TP = 4</text>
+  <text x="590" y="585" text-anchor="middle" font-size="9" fill="#1565C0" font-style="italic">⑤ WAITING_FOR_REMOTE_KVS</text>
+
+  <!-- PROXY SERVER (bottom) -->
+  <rect x="410" y="704" width="300" height="50" rx="10" fill="#FFFFFF" stroke="#1565C0" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="410" y="704" width="300" height="28" rx="10" fill="#1565C0"/>
+  <rect x="410" y="720" width="300" height="12" fill="#1565C0"/>
+  <text x="560" y="724" text-anchor="middle" font-size="13" font-weight="700" fill="#FFF">PROXY SERVER</text>
+  <text x="560" y="746" text-anchor="middle" font-size="10" fill="#757575">forwards SSE stream</text>
+
+  <!-- CLIENT (bottom) -->
+  <rect x="485" y="840" width="150" height="48" rx="8" fill="#FFFFFF" stroke="#616161" stroke-width="2" filter="url(#shadow)"/>
+  <text x="560" y="870" text-anchor="middle" font-size="15" font-weight="700" fill="#333">CLIENT</text>
+
+  <!-- ============================================================ -->
+  <!-- ARROWS LAST                                                   -->
+  <!-- ============================================================ -->
+
+  <!-- Arrow 1: Client → Proxy -->
+  <line x1="410" y1="72" x2="410" y2="138" stroke="#616161" stroke-width="2" marker-end="url(#arr-gray)"/>
+  <circle cx="370" cy="100" r="13" fill="#1565C0"/>
+  <text x="370" y="105" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">1</text>
+  <text x="388" y="100" font-size="11" fill="#555" font-weight="600">HTTP request</text>
+
+  <!-- Arrow 2: Proxy → Prefill -->
+  <path d="M 330 202 L 250 310" stroke="#E4002B" stroke-width="2" fill="none" marker-end="url(#arr-red)"/>
+  <circle cx="260" cy="248" r="13" fill="#E4002B"/>
+  <text x="260" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">2</text>
+  <text x="218" y="268" font-size="10" fill="#555" font-weight="600" text-anchor="middle">prompt</text>
+  <text x="218" y="281" font-size="9" fill="#888" text-anchor="middle">(max_tokens=1)</text>
+
+  <!-- Arrow 3: Prefill → Proxy (dashed return: remote_block_ids + remote_engine_id)          -->
+  <!-- Bezier curves left through empty space to avoid step 2 arrow and circle at (260, 248) -->
+  <path d="M 180 360 Q 95 272 285 202" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arr-lgray)"/>
+  <circle cx="155" cy="294" r="13" fill="#9E9E9E"/>
+  <text x="155" y="299" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">3</text>
+  <text x="138" y="284" text-anchor="end" font-size="10" fill="#555" font-weight="600">remote_block_ids</text>
+  <text x="138" y="297" text-anchor="end" font-size="9" fill="#888">(+ engine_id)</text>
+
+  <!-- Arrow 4: Proxy → Decode (with remote block IDs) -->
+  <path d="M 490 202 L 570 310" stroke="#00843D" stroke-width="2" fill="none" marker-end="url(#arr-green)"/>
+  <circle cx="560" cy="248" r="13" fill="#00843D"/>
+  <text x="560" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">4</text>
+  <text x="600" y="265" font-size="10" fill="#555" font-weight="600" text-anchor="middle">request +</text>
+  <text x="600" y="278" font-size="9" fill="#888" text-anchor="middle">remote_block_ids</text>
+
+  <!-- KV Cache Transfer Arrow (step 5, RDMA READ: decode pulls from prefill) -->
+  <line x1="358" y1="480" x2="462" y2="480" stroke="#1565C0" stroke-width="3" marker-end="url(#arr-blue)"/>
+  <circle cx="410" cy="455" r="13" fill="#1565C0"/>
+  <text x="410" y="460" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">5</text>
+  <rect x="372" y="496" width="76" height="16" rx="3" fill="#FFF8E1" stroke="#F9A825" stroke-width="1"/>
+  <text x="410" y="508" text-anchor="middle" font-size="9" font-weight="600" fill="#E65100">KV Cache</text>
+  <text x="410" y="528" text-anchor="middle" font-size="10" font-weight="600" fill="#1565C0">Mori-IO</text>
+  <text x="410" y="542" text-anchor="middle" font-size="9" fill="#888">(RDMA READ)</text>
+
+  <!-- Arrow 6: Decode → Prefill cleanup (dashed gray, free blocks) -->
+  <line x1="463" y1="592" x2="357" y2="592" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-lgray)"/>
+  <circle cx="410" cy="592" r="11" fill="#9E9E9E"/>
+  <text x="410" y="597" text-anchor="middle" font-size="10" font-weight="700" fill="#FFF">6</text>
+  <text x="410" y="612" text-anchor="middle" font-size="9" fill="#888" font-style="italic">free blocks (cleanup)</text>
+
+  <!-- Arrow 7: Decode → Proxy (bottom) -->
+  <line x1="590" y1="626" x2="590" y2="700" stroke="#00843D" stroke-width="2" marker-end="url(#arr-green)"/>
+  <circle cx="555" cy="660" r="13" fill="#00843D"/>
+  <text x="555" y="665" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">7</text>
+  <text x="538" y="683" font-size="10" fill="#555" font-weight="600" text-anchor="middle">Stream tokens</text>
+
+  <!-- Arrow 7: Proxy → Client (bottom) -->
+  <line x1="560" y1="754" x2="560" y2="836" stroke="#1565C0" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <circle cx="525" cy="790" r="13" fill="#1565C0"/>
+  <text x="525" y="795" text-anchor="middle" font-size="11" font-weight="700" fill="#FFF">7</text>
+  <text x="508" y="812" font-size="10" fill="#555" font-weight="600" text-anchor="middle">SSE stream</text>
+
+  <!-- TIME axis -->
+  <line x1="40" y1="40" x2="40" y2="880" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <polygon points="35,880 40,895 45,880" fill="#BDBDBD"/>
+  <text x="40" y="910" text-anchor="middle" font-size="11" font-weight="600" fill="#BDBDBD">TIME</text>
+</svg>
